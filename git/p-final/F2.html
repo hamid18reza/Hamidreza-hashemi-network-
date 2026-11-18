@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>فرم عیب‌یابی شبکه</title>
+<style>
+@font-face{font-family:IRANSansLocal;src:local('IRANSans'),local('IRANSansWeb')}
+body{font-family:IRANSansLocal,IRANSans,Tahoma,Arial,sans-serif;background:#f4f6f8;color:#17202a;max-width:950px;margin:35px auto;padding:0 18px;line-height:1.9}
+h1{text-align:center;font-size:27px;background:linear-gradient(90deg,#075985,#0e7490,#14b8a6);-webkit-background-clip:text;color:transparent}.device{background:#fff;border:1px solid #d8dee4;border-radius:14px;padding:20px;margin:18px 0;box-shadow:0 4px 14px #07598518;border-right:6px solid #0e7490}.device:nth-of-type(3n+1){border-right-color:#7c3aed}.device:nth-of-type(3n+2){border-right-color:#ea580c}.device:nth-of-type(3n+3){border-right-color:#059669}
+h2{margin-top:0;color:#075985;border-bottom:2px solid #bae6fd;padding-bottom:7px}.command-row{direction:ltr;text-align:left;background:linear-gradient(135deg,#17202a,#164e63);color:#f8fafc;border-radius:7px;padding:9px 10px;margin-top:12px;font-family:Consolas,monospace;display:flex;align-items:center;gap:10px;box-shadow:0 2px 6px #07598522}.command-row code{flex:1}.copy-btn{font-family:IRANSansLocal,IRANSans,Tahoma,sans-serif;background:#14b8a6;color:#fff;border:0;border-radius:5px;padding:5px 9px;cursor:pointer}.copy-btn:hover{background:#0f766e}
+label{display:block;margin-top:10px;font-weight:bold;color:#24445c}textarea{direction:ltr;text-align:left;width:100%;min-height:105px;box-sizing:border-box;margin-top:5px;padding:10px;border:1px solid #cbd5e1;border-radius:7px;font-family:Consolas,monospace;font-size:14px;resize:vertical;transition:border-color .2s,box-shadow .2s}textarea:focus{outline:none;border-color:#0e7490;box-shadow:0 0 0 3px #cffafe}
+.note{background:#e0f2fe;border-right:4px solid #0284c7;padding:10px 14px;border-radius:7px}.actions{text-align:center;position:sticky;bottom:12px}button{font-family:IRANSansLocal,IRANSans,Tahoma,sans-serif;background:#075985;color:#fff;border:0;border-radius:7px;padding:11px 18px;font-size:15px;cursor:pointer;margin:4px;box-shadow:0 2px 5px #07598533}button:hover{background:#0c4a6e}
+</style>
+</head>
+<body>
+<h1>فرم تخصصی عیب‌یابی شبکه</h1>
+<div class="note"><b>مشکل ثبت‌شده:</b> روتر 1 vlan10 را ندارد<br><b>راهنما:</b> خروجی هر دستور را در کادر همان بخش وارد کنید.</div>
+<section class="device"><h2>Router0</h2>
+<div class="command-row" dir="ltr">
+<code>show ip interface brief</code>
+<button class="copy-btn" data-command="show ip interface brief" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="Router0_1">خروجی دستور:</label>
+<textarea id="Router0_1" data-label="Router0 | show ip interface brief" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show ip dhcp binding</code>
+<button class="copy-btn" data-command="show ip dhcp binding" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="Router0_2">خروجی دستور:</label>
+<textarea id="Router0_2" data-label="Router0 | show ip dhcp binding" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show ip dhcp pool</code>
+<button class="copy-btn" data-command="show ip dhcp pool" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="Router0_3">خروجی دستور:</label>
+<textarea id="Router0_3" data-label="Router0 | show ip dhcp pool" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show running-config | section interface</code>
+<button class="copy-btn" data-command="show running-config | section interface" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="Router0_4">خروجی دستور:</label>
+<textarea id="Router0_4" data-label="Router0 | show running-config | section interface" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show running-config | section line vty</code>
+<button class="copy-btn" data-command="show running-config | section line vty" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="Router0_5">خروجی دستور:</label>
+<textarea id="Router0_5" data-label="Router0 | show running-config | section line vty" placeholder="خروجی را اینجا وارد کنید"></textarea>
+</section>
+<section class="device"><h2>router 1</h2>
+<div class="command-row" dir="ltr">
+<code>show ip interface brief</code>
+<button class="copy-btn" data-command="show ip interface brief" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="router_1_1">خروجی دستور:</label>
+<textarea id="router_1_1" data-label="router 1 | show ip interface brief" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show ip dhcp binding</code>
+<button class="copy-btn" data-command="show ip dhcp binding" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="router_1_2">خروجی دستور:</label>
+<textarea id="router_1_2" data-label="router 1 | show ip dhcp binding" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show ip dhcp pool</code>
+<button class="copy-btn" data-command="show ip dhcp pool" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="router_1_3">خروجی دستور:</label>
+<textarea id="router_1_3" data-label="router 1 | show ip dhcp pool" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show running-config | section interface</code>
+<button class="copy-btn" data-command="show running-config | section interface" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="router_1_4">خروجی دستور:</label>
+<textarea id="router_1_4" data-label="router 1 | show running-config | section interface" placeholder="خروجی را اینجا وارد کنید"></textarea>
+<div class="command-row" dir="ltr">
+<code>show running-config | section line vty</code>
+<button class="copy-btn" data-command="show running-config | section line vty" onclick="copyCommand(this)">کپی دستور</button>
+</div>
+<label for="router_1_5">خروجی دستور:</label>
+<textarea id="router_1_5" data-label="router 1 | show running-config | section line vty" placeholder="خروجی را اینجا وارد کنید"></textarea>
+</section>
+<div class="actions"><button onclick="downloadTxt()">دانلود فرم تکمیل‌شده به‌صورت TXT</button><button onclick="window.print()">چاپ یا ذخیره PDF</button></div>
+<script>
+function copyCommand(button){navigator.clipboard.writeText(button.dataset.command).then(()=>{let old=button.textContent;button.textContent='کپی شد';setTimeout(()=>button.textContent=old,1200)}).catch(()=>alert('کپی خودکار انجام نشد؛ دستور را دستی انتخاب کنید.'))}
+function downloadTxt(){let out='فرم ۲: اطلاعات تخصصی عیب‌یابی شبکه\n\n';document.querySelectorAll('textarea').forEach(x=>{out+='===== '+x.dataset.label+' =====\n'+(x.value||'خروجی وارد نشده')+'\n\n'});let blob=new Blob([out],{type:'text/plain;charset=utf-8'});let a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='form2-filled.txt';a.click();URL.revokeObjectURL(a.href)}
+</script>
+</body>
+</html>
